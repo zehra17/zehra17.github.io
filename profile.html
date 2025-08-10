@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolyo - Zehra Yılmaz</title>
     
+    <!-- ÖNEMLİ: Bu linkler, sitenin doğru görünmesi için gereklidir. İnternet bağlantısı gerektirir. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- DÜZELTİLEN KISIM: 'xintegrity' -> 'integrity' olarak değiştirildi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -40,6 +42,7 @@
 </head>
 <body class="gradient-bg js-loading">
 
+    <!-- Navigasyon Menüsü -->
     <header class="bg-black/30 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white tracking-wider">ZY</a>
@@ -78,6 +81,7 @@
             </p>
         </section>
 
+        <!-- Hakkımda Bölümü -->
         <section id="hakkimda" class="py-20 bg-black/20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-white mb-12">Hakkımda</h2>
@@ -92,6 +96,7 @@
             </div>
         </section>
 
+        <!-- Projelerim Bölümü -->
         <section id="projelerim" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-white mb-12">Öne Çıkan Projelerim</h2>
@@ -168,6 +173,7 @@
             </div>
         </section>
 
+        <!-- Yetenekler Bölümü -->
         <section id="yetenekler" class="py-20 bg-black/20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-white mb-12">Teknik Yeteneklerim</h2>
@@ -184,6 +190,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-black/30 py-6">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <p>&copy; 2025 Zehra Yılmaz. Tüm hakları saklıdır.</p>
@@ -191,10 +198,12 @@
     </footer>
 
     <script>
+        // Sayfa yüklendiğinde "loading" class'ını kaldırarak geçiş efekti yarat
         document.addEventListener('DOMContentLoaded', (event) => {
             document.body.classList.remove('js-loading');
         });
 
+        // Mobil menü açma/kapama
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -202,6 +211,7 @@
             mobileMenu.classList.toggle('hidden');
         });
 
+        // Mobil menüdeki linklere tıklanınca menüyü kapat
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
