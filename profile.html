@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo - Zehra Yılmaz</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome (Ikonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Temel stil ayarları */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Ana arka plan rengi */
+            color: #e5e7eb; /* Ana metin rengi */
+        }
+        /* Özel gradient arka planı */
+        .gradient-bg {
+            background-color:#0a0a0a;
+            background-image:
+                radial-gradient(at 27% 37%, hsla(215,98%,62%,0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(125,98%,72%,0.1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(355,98%,72%,0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256,96%,68%,0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38,60%,77%,0.1) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222,67%,73%,0.1) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343,68%,79%,0.1) 0px, transparent 50%);
+        }
+        /* Proje kartları için hover efekti */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(129, 140, 248, 0.2), 0 4px 6px -2px rgba(129, 140, 248, 0.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Navigasyon Menüsü -->
+    <header class="bg-black/30 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">ZY</a> <!-- Baş Harflerin -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#hakkimda" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Hakkımda</a>
+                <a href="#projelerim" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projelerim</a>
+                <a href="#yetenekler" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Yetenekler</a>
+                <a href="https://www.linkedin.com/in/zehrayilmaz19/" target="_blank" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/zehra17" target="_blank" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 text-2xl"><i class="fab fa-github"></i></a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/50">
+            <a href="#hakkimda" class="block text-center py-2 text-gray-300 hover:bg-indigo-600">Hakkımda</a>
+            <a href="#projelerim" class="block text-center py-2 text-gray-300 hover:bg-indigo-600">Projelerim</a>
+            <a href="#yetenekler" class="block text-center py-2 text-gray-300 hover:bg-indigo-600">Yetenekler</a>
+            <a href="https://www.linkedin.com/in/zehrayilmaz19/" target="_blank" class="block text-center py-2 text-gray-300 hover:bg-indigo-600">LinkedIn</a>
+            <a href="https://github.com/zehra17" target="_blank" class="block text-center py-2 text-gray-300 hover:bg-indigo-600">GitHub</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Ana Karşılama Alanı -->
+        <section id="hero" class="container mx-auto px-6 py-20 text-center">
+            <img src="https://placehold.co/150x150/111827/FFFFFF?text=ZY" alt="Profil Fotoğrafı" class="w-40 h-40 rounded-full shadow-lg mx-auto mb-6 border-4 border-indigo-500">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                Zehra Yılmaz
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl font-semibold text-indigo-300">
+                Game Developer & Creative Technologist
+            </p>
+            <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+                Fikirleri koda, kodları ise interaktif ve eğlenceli deneyimlere dönüştürüyorum. Sistemler kurmayı, hikayeler anlatmayı ve bu ikisini birleştirerek yeni dünyalar yaratmayı seviyorum.
+            </p>
+        </section>
+
+        <!-- Hakkımda Bölümü -->
+        <section id="hakkimda" class="py-20 bg-black/20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Hakkımda</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-300 space-y-4 text-center">
+                    <p>
+                        Yazılım yolculuğum, zorlu bir dönemde her şeye yeniden başlarken bulduğum mantıklı ve üretken bir yoldu. Bu süreç bana, en önemli yeteneğin her şeyi bilmek değil, ne kadar zor olursa olsun öğrenme arzusunu ve direncini kaybetmemek olduğunu öğretti.
+                    </p>
+                    <p>
+                        TÜBİTAK projeleriyle analitik düşünme disiplini kazandım, kişisel projelerimle ise bu disiplini yaratıcı bir vizyonla birleştirdim. Benim için bir problemi çözmenin tek bir yolu yok. Bazen bir kod satırıyla, bazen bir oyun mekaniği tasarlayarak, bazen de bir puzzle'ı birleştirerek aynı tatmini yaşıyorum.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projelerim Bölümü (Güncellenmiş) -->
+        <section id="projelerim" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Öne Çıkan Projelerim</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Proje 1: WHISPERSHADE -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">WHISPERSHADE (Prototip)</h3>
+                            <p class="mt-2 text-gray-400">Stratejik derinliği olan, 2D sosyal çıkarım oyunu. GDD ve yol haritası ile geliştirilmekte olan ana projem.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Unity</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">C#</span>
+                                <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Game Design</span>
+                            </div>
+                            <a href="https://github.com/zehra17/WHISPERSHADE" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">GitHub'da İncele <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 2: Bird Spy -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Bird Spy (Oyun)</h3>
+                            <p class="mt-2 text-gray-400">Oyuncunun bir kuşu kontrol ederek engellerden kaçtığı ve yem topladığı, tamamlanmış bir 2D Unity oyunu.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Unity</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">C#</span>
+                            </div>
+                            <a href="https://github.com/zehra17/Bird-Spy" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">GitHub'da İncele <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 3: The Gift -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">The Gift (İnteraktif Hikaye)</h3>
+                            <p class="mt-2 text-gray-400">Dallanan yollara sahip, kişisel ve atmosferik bir interaktif hikaye deneyimi.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                                <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                                <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            </div>
+                            <a href="https://zehra17.github.io/Gift/" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">Canlı Demo <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    
+                     <!-- Proje 4: Masaüstü Düzenleyici -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Masaüstü Düzenleyici</h3>
+                            <p class="mt-2 text-gray-400">Dosyaları uzantılarına göre otomatik olarak ilgili klasörlere taşıyan pratik bir otomasyon script'i.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-500/20 text-gray-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Automation</span>
+                            </div>
+                            <a href="https://github.com/zehra17/Masaustu-Duzenleyici" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">GitHub'da İncele <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Proje 5: Recipe of the Day (DÜZELTİLDİ) -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Recipe of the Day (Python)</h3>
+                            <p class="mt-2 text-gray-400">Bir API'ye bağlanarak her gün rastgele bir yemek tarifi getiren bir konsol uygulaması.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-red-500/20 text-red-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">API</span>
+                            </div>
+                            <a href="https://github.com/zehra17/Recipe-of-the-Day" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">GitHub'da İncele <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Proje 6: Arduino Projeleri -->
+                    <div class="project-card bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Arduino Prototipleme</h3>
+                            <p class="mt-2 text-gray-400">Buton, sıcaklık ve mesafe sensörleri gibi donanımları kullanarak LED ve buzzer kontrolü yapan temel devre ve kodlama çalışmaları.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-teal-500/20 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Arduino</span>
+                                <span class="bg-gray-500/20 text-gray-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Hardware</span>
+                            </div>
+                            <a href="https://github.com/zehra17?tab=repositories&q=control&type=&language=&sort=" target="_blank" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">GitHub'da İncele <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Yetenekler Bölümü -->
+        <section id="yetenekler" class="py-20 bg-black/20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">Teknik Yeteneklerim</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <div class="text-center group">
+                        <i class="fab fa-unity text-6xl text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">Unity</p>
+                    </div>
+                     <div class="text-center group">
+                        <i class="fas fa-code text-6xl text-gray-400 group-hover:text-sky-400 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">C#</p>
+                    </div>
+                    <div class="text-center group">
+                        <i class="fab fa-python text-6xl text-gray-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">Python</p>
+                    </div>
+                    <div class="text-center group">
+                        <i class="fab fa-html5 text-6xl text-gray-400 group-hover:text-orange-500 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">HTML5</p>
+                    </div>
+                    <div class="text-center group">
+                        <i class="fab fa-css3-alt text-6xl text-gray-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">CSS3</p>
+                    </div>
+                    <div class="text-center group">
+                        <i class="fab fa-js-square text-6xl text-gray-400 group-hover:text-yellow-300 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">JavaScript</p>
+                    </div>
+                    <div class="text-center group">
+                        <i class="fas fa-microchip text-6xl text-gray-400 group-hover:text-teal-400 transition-colors duration-300"></i>
+                        <p class="mt-2 text-sm font-semibold text-gray-300">Arduino</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Zehra Yılmaz. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobil menü açma/kapama
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobil menüdeki linklere tıklanınca menüyü kapat
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
